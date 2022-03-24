@@ -60,11 +60,13 @@ def btnClick(button): #padod pogui
     global speletajsX, count #kadi mainigie tiks izmantoti
     if button["text"]=='' and speletajsX==True: #spele X speletajs
         button["text"]='X' #maina uz X
+        button['foreground']='red'
         speletajsX=False
         count+=1 #palielina rutinu skaitu
         checkWinner()
     elif button["text"]=='' and speletajsX==False: #spele O speletajs
         button["text"]='O' #maina uz )
+        button['foreground']='blue'
         speletajsX=True
         count+=1 #palielina rutinu skaitu
         checkWinner()
@@ -84,6 +86,7 @@ def checkWinner():
     btn3["text"]=="X" and btn6["text"]=="X" and btn9["text"]=="X" or
     btn1["text"]=="X" and btn5["text"]=="X" and btn9["text"]=="X" or
     btn3["text"]=="X" and btn5["text"]=="X" and btn7["text"]=="X"):
+
         winner=True
         disableButtons()
         messagebox.showinfo('TicTacToe', 'Spēlētājs X ir uzvarētājs')
@@ -126,15 +129,15 @@ def infoLogs():
 
 #--------------------------------------------------------------------------------------------
 
-btn1=Button(mansLogs,text="", width=6,height=3,font=('Helvica',24), bd=10, bg='lightgrey', command=lambda:btnClick(btn1))
-btn2=Button(mansLogs,text="", width=6,height=3,font=('Helvica',24), bd=10, bg='white', command=lambda:btnClick(btn2))
-btn3=Button(mansLogs,text="", width=6,height=3,font=('Helvica',24), bd=10, bg='lightgrey', command=lambda:btnClick(btn3))
-btn4=Button(mansLogs,text="", width=6,height=3,font=('Helvica',24), bd=10, bg='white', command=lambda:btnClick(btn4))
-btn5=Button(mansLogs,text="", width=6,height=3,font=('Helvica',24), bd=10, bg='lightgrey', command=lambda:btnClick(btn5))
-btn6=Button(mansLogs,text="", width=6,height=3,font=('Helvica',24), bd=10, bg='white', command=lambda:btnClick(btn6))
-btn7=Button(mansLogs,text="", width=6,height=3,font=('Helvica',24), bd=10, bg='lightgrey', command=lambda:btnClick(btn7))
-btn8=Button(mansLogs,text="", width=6,height=3,font=('Helvica',24), bd=10, bg='white', command=lambda:btnClick(btn8))
-btn9=Button(mansLogs,text="", width=6,height=3,font=('Helvica',24), bd=10, bg='lightgrey', command=lambda:btnClick(btn9))
+btn1=Button(mansLogs,text="", width=6,height=3,font=('Helvica',24), bd=10, bg='peachpuff3', activebackground='peachpuff4', command=lambda:btnClick(btn1))
+btn2=Button(mansLogs,text="", width=6,height=3,font=('Helvica',24), bd=10, bg='lightgoldenrodyellow', activebackground='lemonchiffon3', command=lambda:btnClick(btn2))
+btn3=Button(mansLogs,text="", width=6,height=3,font=('Helvica',24), bd=10, bg='peachpuff3', activebackground='peachpuff4', command=lambda:btnClick(btn3))
+btn4=Button(mansLogs,text="", width=6,height=3,font=('Helvica',24), bd=10, bg='lightgoldenrodyellow', activebackground='lemonchiffon3', command=lambda:btnClick(btn4))
+btn5=Button(mansLogs,text="", width=6,height=3,font=('Helvica',24), bd=10, bg='peachpuff3', activebackground='peachpuff4', command=lambda:btnClick(btn5))
+btn6=Button(mansLogs,text="", width=6,height=3,font=('Helvica',24), bd=10, bg='lightgoldenrodyellow', activebackground='lemonchiffon3', command=lambda:btnClick(btn6))
+btn7=Button(mansLogs,text="", width=6,height=3,font=('Helvica',24), bd=10, bg='peachpuff3', activebackground='peachpuff4', command=lambda:btnClick(btn7))
+btn8=Button(mansLogs,text="", width=6,height=3,font=('Helvica',24), bd=10, bg='lightgoldenrodyellow', activebackground='lemonchiffon3', command=lambda:btnClick(btn8))
+btn9=Button(mansLogs,text="", width=6,height=3,font=('Helvica',24), bd=10, bg='peachpuff3', activebackground='peachpuff4', command=lambda:btnClick(btn9))
 
 #--------------------------------------------------------------------------------------------
 
