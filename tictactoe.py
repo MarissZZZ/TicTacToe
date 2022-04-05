@@ -199,7 +199,7 @@ def checkWinner():
         btn7['background']='blue'
         disableButtons()
         messagebox.showinfo('TicTacToe', 'Spēlētājs O ir uzvarētājs')
-    elif count==9:
+    elif count==9 and winner==False:
         winner=False
         disableButtons()
         messagebox.showinfo('TicTacToe', 'Spēles rezultāts ir neizšķirts')
