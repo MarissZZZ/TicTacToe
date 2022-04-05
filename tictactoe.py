@@ -47,6 +47,15 @@ def reset():
     btn7['text']=''
     btn8['text']=''
     btn9['text']=''
+    btn1['background']='peachpuff3'
+    btn2['background']='lightgoldenrodyellow'
+    btn3['background']='peachpuff3'
+    btn4['background']='lightgoldenrodyellow'
+    btn5['background']='peachpuff3'
+    btn6['background']='lightgoldenrodyellow'
+    btn7['background']='peachpuff3'
+    btn8['background']='lightgoldenrodyellow'
+    btn9['background']='peachpuff3'
 
     global winner,count,speletajsX
     winner=False
@@ -78,27 +87,116 @@ def btnClick(button): #padod pogui
 
 def checkWinner():
     global winner
-    if (btn1["text"]=="X" and btn2["text"]=="X" and btn3["text"]=="X" or 
-    btn1["text"]=="X" and btn4["text"]=="X" and btn7["text"]=="X" or
-    btn4["text"]=="X" and btn5["text"]=="X" and btn6["text"]=="X" or
-    btn7["text"]=="X" and btn8["text"]=="X" and btn9["text"]=="X" or
-    btn2["text"]=="X" and btn5["text"]=="X" and btn8["text"]=="X" or 
-    btn3["text"]=="X" and btn6["text"]=="X" and btn9["text"]=="X" or
-    btn1["text"]=="X" and btn5["text"]=="X" and btn9["text"]=="X" or
-    btn3["text"]=="X" and btn5["text"]=="X" and btn7["text"]=="X"):
-
+    if (btn1["text"]=="X" and btn2["text"]=="X" and btn3["text"]=="X"):
         winner=True
+        btn1['background']='red'
+        btn2['background']='red'
+        btn3['background']='red'
         disableButtons()
         messagebox.showinfo('TicTacToe', 'Spēlētājs X ir uzvarētājs')
-    elif (btn1["text"]=="O" and btn2["text"]=="O" and btn3["text"]=="O" or 
-    btn1["text"]=="O" and btn4["text"]=="O" and btn7["text"]=="O" or
-    btn4["text"]=="O" and btn5["text"]=="O" and btn6["text"]=="O" or
-    btn7["text"]=="O" and btn8["text"]=="O" and btn9["text"]=="O" or
-    btn2["text"]=="O" and btn5["text"]=="O" and btn8["text"]=="O" or 
-    btn3["text"]=="O" and btn6["text"]=="O" and btn9["text"]=="O" or
-    btn1["text"]=="O" and btn5["text"]=="O" and btn9["text"]=="O" or
-    btn3["text"]=="O" and btn5["text"]=="O" and btn7["text"]=="O"):
+    if (btn1["text"]=="X" and btn4["text"]=="X" and btn7["text"]=="X"):
         winner=True
+        btn1['background']='red'
+        btn4['background']='red'
+        btn7['background']='red'
+        disableButtons()
+        messagebox.showinfo('TicTacToe', 'Spēlētājs X ir uzvarētājs')
+    if (btn4["text"]=="X" and btn5["text"]=="X" and btn6["text"]=="X"):
+        winner=True
+        btn4['background']='red'
+        btn5['background']='red'
+        btn6['background']='red'
+        disableButtons()
+        messagebox.showinfo('TicTacToe', 'Spēlētājs X ir uzvarētājs')
+    if (btn7["text"]=="X" and btn8["text"]=="X" and btn9["text"]=="X"):
+        winner=True
+        btn7['background']='red'
+        btn8['background']='red'
+        btn9['background']='red'
+        disableButtons()
+        messagebox.showinfo('TicTacToe', 'Spēlētājs X ir uzvarētājs')
+    if (btn2["text"]=="X" and btn5["text"]=="X" and btn8["text"]=="X"):
+        winner=True
+        btn2['background']='red'
+        btn5['background']='red'
+        btn8['background']='red'
+        disableButtons()
+        messagebox.showinfo('TicTacToe', 'Spēlētājs X ir uzvarētājs')  
+    if (btn3["text"]=="X" and btn6["text"]=="X" and btn9["text"]=="X"):
+        winner=True
+        btn3['background']='red'
+        btn6['background']='red'
+        btn9['background']='red'
+        disableButtons()
+        messagebox.showinfo('TicTacToe', 'Spēlētājs X ir uzvarētājs') 
+    if (btn1["text"]=="X" and btn5["text"]=="X" and btn9["text"]=="X"):
+        winner=True
+        btn1['background']='red'
+        btn5['background']='red'
+        btn9['background']='red'
+        disableButtons()
+        messagebox.showinfo('TicTacToe', 'Spēlētājs X ir uzvarētājs') 
+    if (btn3["text"]=="X" and btn5["text"]=="X" and btn7["text"]=="X"):
+        winner=True
+        btn3['background']='red'
+        btn5['background']='red'
+        btn7['background']='red'
+        disableButtons()
+        messagebox.showinfo('TicTacToe', 'Spēlētājs X ir uzvarētājs')
+    elif (btn1["text"]=="O" and btn2["text"]=="O" and btn3["text"]=="O"):
+        winner=True
+        btn1['background']='blue'
+        btn2['background']='blue'
+        btn3['background']='blue'
+        disableButtons()
+        messagebox.showinfo('TicTacToe', 'Spēlētājs O ir uzvarētājs')
+    elif (btn1["text"]=="O" and btn4["text"]=="O" and btn7["text"]=="O"):
+        winner=True
+        btn1['background']='blue'
+        btn4['background']='blue'
+        btn7['background']='blue'
+        disableButtons()
+        messagebox.showinfo('TicTacToe', 'Spēlētājs O ir uzvarētājs')
+    elif (btn4["text"]=="O" and btn5["text"]=="O" and btn6["text"]=="O"):
+        winner=True
+        btn4['background']='blue'
+        btn5['background']='blue'
+        btn6['background']='blue'
+        disableButtons()
+        messagebox.showinfo('TicTacToe', 'Spēlētājs O ir uzvarētājs')
+    elif (btn7["text"]=="O" and btn8["text"]=="O" and btn9["text"]=="O"):
+        winner=True
+        btn7['background']='blue'
+        btn8['background']='blue'
+        btn9['background']='blue'
+        disableButtons()
+        messagebox.showinfo('TicTacToe', 'Spēlētājs O ir uzvarētājs')
+    elif (btn2["text"]=="O" and btn5["text"]=="O" and btn8["text"]=="O"):
+        winner=True
+        btn2['background']='blue'
+        btn5['background']='blue'
+        btn8['background']='blue'
+        disableButtons()
+        messagebox.showinfo('TicTacToe', 'Spēlētājs O ir uzvarētājs')
+    elif (btn3["text"]=="O" and btn6["text"]=="O" and btn9["text"]=="O"):
+        winner=True
+        btn3['background']='blue'
+        btn6['background']='blue'
+        btn9['background']='blue'
+        disableButtons()
+        messagebox.showinfo('TicTacToe', 'Spēlētājs O ir uzvarētājs')
+    elif (btn1["text"]=="O" and btn5["text"]=="O" and btn9["text"]=="O"):
+        winner=True
+        btn1['background']='blue'
+        btn5['background']='blue'
+        btn9['background']='blue'
+        disableButtons()
+        messagebox.showinfo('TicTacToe', 'Spēlētājs O ir uzvarētājs')
+    elif (btn3["text"]=="O" and btn5["text"]=="O" and btn7["text"]=="O"):
+        winner=True
+        btn3['background']='blue'
+        btn5['background']='blue'
+        btn7['background']='blue'
         disableButtons()
         messagebox.showinfo('TicTacToe', 'Spēlētājs O ir uzvarētājs')
     elif count==9:
@@ -157,7 +255,7 @@ galvenaIzvelne.add_cascade(label='Opcijas',menu=opcijas) #lejupkritosais sarakst
 opcijas.add_command(label="Jauna spēle",command=reset)
 opcijas.add_command(label="Iziet",command=mansLogs.quit)
 
-galvenaIzvelne.add_command(label='Par programmu',command=infoLogs) #pievieno mazajai izvelnei
+galvenaIzvelne.add_command(label='Spēles noteikumi',command=infoLogs) #pievieno mazajai izvelnei
 
 #--------------------------------------------------------------------------------------------
 
